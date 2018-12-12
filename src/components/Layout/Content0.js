@@ -1,7 +1,7 @@
-import React from 'react';
-import QueueAnim from 'rc-queue-anim';
-import { Row, Col } from 'antd';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import React from 'react'
+import QueueAnim from 'rc-queue-anim'
+import { Row, Col } from 'antd'
+import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 
 class Content extends React.PureComponent {
   getBlockChildren = (data) =>
@@ -58,8 +58,8 @@ class Content extends React.PureComponent {
           </OverPack>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Content;
+export default Content

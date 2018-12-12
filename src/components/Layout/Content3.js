@@ -1,28 +1,28 @@
-import React from 'react';
-import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
-import { Row, Col } from 'antd';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import React from 'react'
+import QueueAnim from 'rc-queue-anim'
+import TweenOne from 'rc-tween-one'
+import { Row, Col } from 'antd'
+import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
 
 class Content3 extends React.PureComponent {
   getDelay = (e, b) => (e % b) * 100 + Math.floor(e / b) * 100 + b * 100;
 
   render() {
-    const { ...props } = this.props;
-    const { dataSource, isMobile } = props;
-    delete props.dataSource;
-    delete props.isMobile;
-    let clearFloatNum = 0;
+    const { ...props } = this.props
+    const { dataSource, isMobile } = props
+    delete props.dataSource
+    delete props.isMobile
+    let clearFloatNum = 0
     const children = dataSource.block.children.map((item, i) => {
-      const childObj = item.children;
-      const delay = isMobile ? i * 50 : this.getDelay(i, 24 / item.md);
+      const childObj = item.children
+      const delay = isMobile ? i * 50 : this.getDelay(i, 24 / item.md)
       const liAnim = {
         opacity: 0,
         type: 'from',
         ease: 'easeOutQuad',
-        delay,
-      };
-      const childrenAnim = { ...liAnim, x: '+=10', delay: delay + 100 };
+        delay
+      }
+      const childrenAnim = { ...liAnim, x: '+=10', delay: delay + 100 }
       clearFloatNum += item.md;
       clearFloatNum = clearFloatNum > 24 ? 0 : clearFloatNum;
       return (
@@ -69,8 +69,8 @@ class Content3 extends React.PureComponent {
             </TweenOne>
           </div>
         </TweenOne>
-      );
-    });
+      )
+    })
     return (
       <div {...props} {...dataSource.wrapper}>
         <div {...dataSource.page}>
@@ -100,8 +100,8 @@ class Content3 extends React.PureComponent {
           </OverPack>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Content3;
+export default Content3

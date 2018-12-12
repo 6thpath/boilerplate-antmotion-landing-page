@@ -1,17 +1,17 @@
-import React from 'react';
-import { findDOMNode } from 'react-dom';
-import TweenOne from 'rc-tween-one';
-import { Menu } from 'antd';
+import React from 'react'
+import { findDOMNode } from 'react-dom'
+import TweenOne from 'rc-tween-one'
+import { Menu } from 'antd'
 
-const Item = Menu.Item;
+const Item = Menu.Item
 
 class Header extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       phoneOpen: false,
       menuHeight: 0,
-    };
+    }
   }
 
   phoneClick = () => {
@@ -19,9 +19,9 @@ class Header extends React.Component {
     const phoneOpen = !this.state.phoneOpen;
     this.setState({
       phoneOpen,
-      menuHeight: phoneOpen ? menu.scrollHeight : 0,
-    });
-  };
+      menuHeight: phoneOpen ? menu.scrollHeight : 0
+    })
+  }
 
   render() {
     const { ...props } = this.props;
@@ -88,8 +88,8 @@ class Header extends React.Component {
           </TweenOne>
         </div>
       </TweenOne>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header

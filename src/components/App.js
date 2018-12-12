@@ -5,12 +5,12 @@ import { enquireScreen } from 'enquire-js'
 
 import 'antd/dist/antd.css'
 
-import Nav0 from './Layout/Nav0';
-import Banner0 from './Layout/Banner0';
-import Content0 from './Layout/Content0';
-import Content5 from './Layout/Content5';
-import Content3 from './Layout/Content3';
-import Footer1 from './Layout/Footer1';
+import Nav0 from './Layout/Nav0'
+import Banner0 from './Layout/Banner0'
+import Content0 from './Layout/Content0'
+import Content5 from './Layout/Content5'
+import Content3 from './Layout/Content3'
+import Footer1 from './Layout/Footer1'
 
 import {
   Nav00DataSource,
@@ -18,9 +18,9 @@ import {
   Content00DataSource,
   Content50DataSource,
   Content30DataSource,
-  Footer10DataSource,
-} from '../data.source';
-import '../less/antMotionStyle.less';
+  Footer10DataSource
+} from '../data.source'
+import '../less/antMotionStyle.less'
 
 let isMobile
 enquireScreen((b) => { isMobile = b })
@@ -38,7 +38,7 @@ export default class Home extends React.Component {
 
   componentDidMount() {
     enquireScreen((b) => {
-      this.setState({ isMobile: !!b });
+      this.setState({ isMobile: !!b })
     })
 
     if (location.port) {

@@ -1,13 +1,13 @@
-import React from 'react';
-import TweenOne from 'rc-tween-one';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import QueueAnim from 'rc-queue-anim';
-import { Row, Col } from 'antd';
+import React from 'react'
+import TweenOne from 'rc-tween-one'
+import OverPack from 'rc-scroll-anim/lib/ScrollOverPack'
+import QueueAnim from 'rc-queue-anim'
+import { Row, Col } from 'antd'
 
 class Footer extends React.Component {
   static defaultProps = {
-    className: 'footer1',
-  };
+    className: 'footer1'
+  }
 
   getLiChildren = (data) =>
     data.map((item, i) => {
@@ -25,15 +25,15 @@ class Footer extends React.Component {
           </h2>
           <div {...item.content}>{item.content.children}</div>
         </Col>
-      );
-    });
+      )
+    })
 
   render() {
-    const { ...props } = this.props;
-    const { dataSource } = props;
-    delete props.dataSource;
-    delete props.isMobile;
-    const childrenToRender = this.getLiChildren(dataSource.block.children);
+    const { ...props } = this.props
+    const { dataSource } = props
+    delete props.dataSource
+    delete props.isMobile
+    const childrenToRender = this.getLiChildren(dataSource.block.children)
     return (
       <div {...props} {...dataSource.wrapper}>
         <OverPack {...dataSource.OverPack}>
@@ -59,8 +59,8 @@ class Footer extends React.Component {
           </TweenOne>
         </OverPack>
       </div>
-    );
+    )
   }
 }
 
-export default Footer;
+export default Footer
