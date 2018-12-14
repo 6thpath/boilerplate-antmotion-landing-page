@@ -3,8 +3,6 @@ import { enquireScreen } from 'enquire-js'
 
 import 'antd/dist/antd.css'
 
-import { Affix, Button } from 'antd'
-
 import Nav from './Layout/Nav'
 import Banner from './Layout/Banner'
 import FirstSection from './Layout/FirstSection'
@@ -43,13 +41,23 @@ export default class Home extends React.Component {
     }
   }
 
+  changeLanguage = () => {
+    this.setState({
+      isEnglish: !this.state.isEnglish,
+      buttonText: this.state.buttonText === `Tiếng Việt` ? `English` : `Tiếng Việt`
+    })
+  }
+
   render() {
     const { isEnglish } = this.state
     const { English, Vietnamese } = languageConfig
+
     const children = [
       <Nav
         id="Nav"
         key="Nav"
+        switch={this.changeLanguage.bind(this)}
+        buttonText={this.state.buttonText}
         textData={isEnglish ? English : Vietnamese}
         isMobile={this.state.isMobile}
       />,
@@ -91,19 +99,6 @@ export default class Home extends React.Component {
         ref={(d) => { this.dom = d }}
       >
         {this.state.show && children}
-        <Affix offsetBottom={5} style={{position: 'absolute', right: 10}}>
-          <Button
-            type='primary'
-            onClick={() => {
-              this.setState({
-                isEnglish: !this.state.isEnglish,
-                buttonText: this.state.buttonText === `Tiếng Việt` ? `English` : `Tiếng Việt`
-              })
-            }}
-          >
-            {this.state.buttonText}
-          </Button>
-        </Affix>
       </div>
     )
   }
