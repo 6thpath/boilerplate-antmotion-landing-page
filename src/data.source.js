@@ -1,487 +1,345 @@
-import React from 'react';
-export const Nav00DataSource = {
-  wrapper: { className: 'header0 home-page-wrapper' },
-  page: { className: 'home-page' },
-  logo: {
-    className: 'header0-logo',
-    children: 'https://os.alipayobjects.com/rmsportal/mlcYmsRilwraoAe.svg',
-  },
-  Menu: {
-    className: 'header0-menu',
-    children: [
-      { name: 'item0', a: { children: '导航一', href: '' } },
-      { name: 'item1', a: { children: '导航二', href: '' } },
-      { name: 'item2', a: { children: '导航三', href: '' } },
-      { name: 'item3', a: { children: '导航四', href: '' } },
+import React from 'react'
+
+export const languageConfig = {
+  English: {
+    navigationItems: [
+      { key: '0', path: '/', text: `ITEM 1` },
+      { key: '1', path: '/', text: `ITEM 2` },
+      { key: '2', path: '/', text: `ITEM 3` },
+      { key: '3', path: '/', text: `ITEM 4` }
     ],
-  },
-  mobileMenu: { className: 'header0-mobile-menu' },
-};
-export const Banner01DataSource = {
-  wrapper: { className: 'banner0' },
-  textWrapper: { className: 'banner0-text-wrapper' },
-  title: {
-    className: 'banner0-title',
-    children: 'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-  },
-  content: {
-    className: 'banner0-content',
-    children: '一个高效的页面动画解决方案',
-  },
-  button: { className: 'banner0-button', children: 'Learn More' },
-};
-export const Content00DataSource = {
-  wrapper: { className: 'home-page-wrapper content0-wrapper' },
-  page: { className: 'home-page content0' },
-  OverPack: { playScale: 0.3, className: '' },
-  titleWrapper: {
-    className: 'title-wrapper',
-    children: [{ name: 'title', children: '产品与服务' }],
-  },
-  block: {
-    className: 'block-wrapper',
-    children: [
-      {
-        name: 'block0',
-        className: 'block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png',
-          },
-          title: { className: 'content0-title', children: '一站式业务接入' },
-          content: { children: '支付、结算、核算接入产品效率翻四倍' },
+
+    banner: {
+      introduction: `Team 13's Event-box web application.`,
+      button: `See more`
+    },
+
+    firstSection: {
+      title: [{ key: '0', name: 'title', text: `Products and Services` }], // name !== title => subtitle
+      block: [
+        {
+          key: '0',
+          iconLink: 'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png',
+          title: 'One-stop service access',
+          description: 'Four times the efficiency of payment, settlement, and accounting access products.'
         },
-      },
-      {
-        name: 'block1',
-        className: 'block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png',
-          },
-          title: {
-            className: 'content0-title',
-            children: '一站式事中风险监控',
-          },
-          content: { children: '在所有需求配置环节事前风险控制和质量控制能力' },
+        {
+          key: '1',
+          iconLink: 'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png',
+          title: 'One-stop risk monitoring',
+          description: 'Prior risk control and quality control capabilities in all requirements configuration.'
         },
-      },
-      {
-        name: 'block2',
-        className: 'block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png',
-          },
-          title: { className: 'content0-title', children: '一站式数据运营' },
-          content: { children: '沉淀产品接入效率和运营小二工作效率数据' },
+        {
+          key: '2',
+          iconLink: 'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png',
+          title: 'One-stop data operation',
+          description: 'Precipitation product access efficiency and operational small two work efficiency data.'
+        }
+      ]
+    },
+
+    secondSection: {
+      title: [
+        { key: '0', name: 'title', text: `Customer case` },
+        { key: '1', name: 'content', text: `Here is a case study of the case of the service.`}
+      ], // name !== title => subtitle
+      block: [
+        {
+          key: '0',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
         },
-      },
+        {
+          key: '1',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
+        },
+        {
+          key: '3',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
+        },
+        {
+          key: '4',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
+        },
+        {
+          key: '5',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
+        },
+        {
+          key: '6',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
+        },
+        {
+          key: '7',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
+        },
+        {
+          key: '8',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
+        },
+      ]
+    },
+
+    thirdSection: {
+      title: [
+        { name: 'title', text: `Ant Financial Cloud provides professional services` },
+        { name: 'content', text: `Based on Alibaba Cloud's powerful basic resources` }
+      ],
+      block: [
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png',
+          title: 'Enterprise resource management',
+          content: 'Cloud resources are centrally choreographed, elastically scalable, continuously released and deployed, and highly available and disaster tolerant.'
+        },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png',
+          title: 'Cloud security',
+          content: 'The complete cloud security system built according to the security requirements of financial enterprises guarantees financial applications and data security in all aspects.'
+        },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
+          title: 'Cloud monitoring' ,
+          content: 'Centralized monitoring of distributed cloud environments, unified resource and application status views, intelligent analysis and fault location.'
+        },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png',
+          title: 'Mobile',
+          content:  'One-stop mobile financial APP development and comprehensive monitoring; rich available components, dynamic release and fault hot fix.'
+        },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png',
+          title: 'Distributed middleware' ,
+          content: 'Financial-grade online transaction processing middleware, large-scale distributed computer, tens of thousands of pens per second concurrent capability, and strict guarantee of transaction data uniformity.'
+        },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png',
+          title: 'Big Data',
+          content: 'One-stop, full-cycle big data collaborative work platform, PB level data processing, millisecond data analysis tools.'
+        }
+      ]
+    },
+
+    footer: {
+      block: [
+        {
+          title: 'https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg',
+          content: 'Animation specification and components of Ant Design.'
+        },
+        {
+          title: 'Products',
+          content: (
+              <span>
+                <p><span href="#">Product update record</span></p>
+                <p><span href="#">API documentation</span></p>
+                <p><span href="#">Quick start</span></p>
+                <p><span href="#">Reference guide</span></p>
+              </span>
+          )
+        },
+        {
+          title: 'Introduction',
+          content: (
+              <span>
+                <p><span href="#">FAQ</span></p>
+                <p><span href="#">Contact us</span></p>
+              </span>
+          )
+        },
+        {
+          title: 'Resources',
+          content: (
+              <span>
+                <p><span href="#">Ant Design</span></p>
+                <p><span href="#">Ant Design</span></p>
+                <p><span href="#">Ant Design</span></p>
+                <p><span href="#">Ant Design</span></p>
+              </span>
+          )
+        }
+      ],
+      copyright: (
+        <span>
+          ©2018 by <a href='https://ant.design'>Ant Motion</a> All Rights Reserved
+        </span>
+      )
+    }
+  },
+
+  Vietnamese: {
+    navigationItems: [
+      { key: '0', path: '/', text: 'MỤC 1' },
+      { key: '1', path: '/', text: 'MỤC 2' },
+      { key: '2', path: '/', text: 'MỤC 3' },
+      { key: '3', path: '/', text: 'MỤC 4' }
     ],
-  },
-};
-export const Content50DataSource = {
-  wrapper: { className: 'home-page-wrapper content5-wrapper' },
-  page: { className: 'home-page content5 jpl17zkbjcf-editor_css' },
-  OverPack: { playScale: 0.3, className: '' },
-  titleWrapper: {
-    className: 'title-wrapper',
-    children: [
-      { name: 'title', children: '客户案例', className: 'title-h1' },
-      {
-        name: 'content',
-        className: 'title-content',
-        children: '在这里用一段话介绍服务的案例情况',
-      },
-    ],
-  },
-  block: {
-    className: 'content5-img-wrapper',
-    gutter: 16,
-    children: [
-      {
-        name: 'block0',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: { children: 'Ant Design' },
+
+    banner: {
+      introduction: `Sản phẩm ứng dụng website Event-box phát triển bởi nhóm 13.`,
+      button: `Xem thêm`
+    },
+
+    firstSection: {
+      title: [{ key: '0', name: 'title', text: `Sản phẩm và Dịch vụ` }], // name !== title => subtitle
+      block: [
+        {
+          key: '0',
+          iconLink: 'https://zos.alipayobjects.com/rmsportal/WBnVOjtIlGWbzyQivuyq.png',
+          title: 'Truy cập dịch vụ',
+          description: 'Bốn lần hiệu quả thanh toán, thanh toán, và kế toán truy cập sản phẩm.'
         },
-      },
-      {
-        name: 'block1',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: { children: 'Ant Motion' },
+        {
+          key: '1',
+          iconLink: 'https://zos.alipayobjects.com/rmsportal/YPMsLQuCEXtuEkmXTTdk.png',
+          title: 'Giám sát rủi ro',
+          description: 'Kiểm soát rủi ro trước và khả năng kiểm soát chất lượng trong tất cả các cấu hình yêu cầu.'
         },
-      },
-      {
-        name: 'block2',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: { children: 'Ant Design' },
+        {
+          key: '2',
+          iconLink: 'https://zos.alipayobjects.com/rmsportal/EkXWVvAaFJKCzhMmQYiX.png',
+          title: 'Hoạt động dữ liệu',
+          description: 'Lượng mưa hiệu quả truy cập sản phẩm và hoạt động nhỏ hai dữ liệu hiệu quả công việc.'
+        }
+      ]
+    },
+
+    secondSection: {
+      title: [
+        { key: '0', name: 'title', text: `Trường hợp khách hàng` },
+        { key: '1', name: 'content', text: `Dưới đây là một trường hợp nghiên cứu về trường hợp của dịch vụ.`}
+      ], // name !== title => subtitle
+      block: [
+        {
+          key: '0',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
         },
-      },
-      {
-        name: 'block3',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: { children: 'Ant Motion' },
+        {
+          key: '1',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
         },
-      },
-      {
-        name: 'block4',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: { children: 'Ant Design' },
+        {
+          key: '3',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
         },
-      },
-      {
-        name: 'block5',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: { children: 'Ant Motion' },
+        {
+          key: '4',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
         },
-      },
-      {
-        name: 'block6',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
-          },
-          content: { children: 'Ant Design' },
+        {
+          key: '5',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
         },
-      },
-      {
-        name: 'block7',
-        className: 'block',
-        md: 6,
-        xs: 24,
-        children: {
-          wrapper: { className: 'content5-block-content' },
-          img: {
-            children:
-              'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
-          },
-          content: { children: 'Ant Motion' },
+        {
+          key: '6',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
         },
-      },
-    ],
-  },
-};
-export const Content30DataSource = {
-  wrapper: { className: 'home-page-wrapper content3-wrapper' },
-  page: { className: 'home-page content3' },
-  OverPack: { playScale: 0.3 },
-  titleWrapper: {
-    className: 'title-wrapper',
-    children: [
-      {
-        name: 'title',
-        children: '蚂蚁金融云提供专业的服务',
-        className: 'title-h1',
-      },
-      {
-        name: 'content',
-        className: 'title-content',
-        children: '基于阿里云强大的基础资源',
-      },
-    ],
-  },
-  block: {
-    className: 'content3-block-wrapper',
-    children: [
-      {
-        name: 'block0',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '企业资源管理' },
-          content: {
-            className: 'content3-content',
-            children:
-              '云资源集中编排、弹性伸缩、持续发布和部署，高可用及容灾。',
-          },
+        {
+          key: '7',
+          imgLink: 'https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg',
+          text: 'Ant Design'
         },
-      },
-      {
-        name: 'block1',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '云安全' },
-          content: {
-            className: 'content3-content',
-            children:
-              '按金融企业安全要求打造的完整云上安全体系，全方位保障金融应用及数据安全。',
-          },
+        {
+          key: '8',
+          imgLink: 'https://zos.alipayobjects.com/rmsportal/faKjZtrmIbwJvVR.svg',
+          text: 'Ant Motion'
         },
-      },
-      {
-        name: 'block2',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '云监控' },
-          content: {
-            className: 'content3-content',
-            children:
-              '分布式云环境集中监控，统一资源及应用状态视图，智能分析及故障定位。',
-          },
+      ]
+    },
+
+    thirdSection: {
+      title: [
+        { name: 'title', text: `Ant Financial Cloud cung cấp dịch vụ chuyên nghiệp` },
+        { name: 'content', text: `Dựa trên các tài nguyên cơ bản mạnh mẽ của Alibaba Cloud` }
+      ],
+      block: [
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/ScHBSdwpTkAHZkJ.png',
+          title: 'Quản lý tài nguyên doanh nghiệp',
+          content: 'Tài nguyên đám mây được biên đạo tập trung, có khả năng co giãn linh hoạt, liên tục được phát hành và triển khai và khả năng chống thiên tai cao.'
         },
-      },
-      {
-        name: 'block3',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '移动' },
-          content: {
-            className: 'content3-content',
-            children:
-              '一站式移动金融APP开发及全面监控；丰富可用组件，动态发布和故障热修复。',
-          },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/NKBELAOuuKbofDD.png',
+          title: 'Bảo mật đám mây',
+          content: 'Hệ thống bảo mật đám mây hoàn chỉnh được xây dựng theo yêu cầu bảo mật của các doanh nghiệp tài chính đảm bảo cho các ứng dụng tài chính và bảo mật dữ liệu về mọi mặt.'
         },
-      },
-      {
-        name: 'block4',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '分布式中间件' },
-          content: {
-            className: 'content3-content',
-            children:
-              '金融级联机交易处理中间件，大规模分布式计算机，数万笔/秒级并发能力，严格保证交易数据统一性。',
-          },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/xMSBjgxBhKfyMWX.png',
+          title: 'Giám sát đám mây' ,
+          content: 'Giám sát tập trung các môi trường đám mây phân tán, các chế độ xem trạng thái ứng dụng và tài nguyên thống nhất, phân tích thông minh và vị trí lỗi.'
         },
-      },
-      {
-        name: 'block5',
-        className: 'content3-block',
-        md: 8,
-        xs: 24,
-        children: {
-          icon: {
-            className: 'content3-icon',
-            children:
-              'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png',
-          },
-          textWrapper: { className: 'content3-text' },
-          title: { className: 'content3-title', children: '大数据' },
-          content: {
-            className: 'content3-content',
-            children:
-              '一站式、全周期大数据协同工作平台，PB级数据处理、毫秒级数据分析工具。',
-          },
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/MNdlBNhmDBLuzqp.png',
+          title: 'Di động',
+          content:  'Phát triển APP tài chính di động một cửa và giám sát toàn diện; thành phần phong phú có sẵn, phát hành động và sửa lỗi nóng.'
         },
-      },
-    ],
-  },
-};
-export const Footer10DataSource = {
-  wrapper: { className: 'home-page-wrapper footer1-wrapper' },
-  OverPack: { className: 'footer1', playScale: 0.2 },
-  block: {
-    className: 'home-page',
-    children: [
-      {
-        name: 'block0',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: {
-          className: 'logo',
-          children:
-            'https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg',
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/UsUmoBRyLvkIQeO.png',
+          title: 'Phân phối trung gian' ,
+          content: 'Phần mềm trung gian xử lý giao dịch trực tuyến cấp tài chính, máy tính phân tán quy mô lớn, hàng chục nghìn bút mỗi giây có khả năng đồng thời và đảm bảo nghiêm ngặt về tính đồng nhất dữ liệu giao dịch.'
         },
-        content: {
-          className: 'slogan',
-          children: 'Animation specification and components of Ant Design.',
+        {
+          icon: 'https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png',
+          title: 'Dữ liệu lớn',
+          content: 'Nền tảng làm việc cộng tác dữ liệu lớn một chu kỳ, một chu kỳ, xử lý dữ liệu mức PB, công cụ phân tích dữ liệu mili giây.'
+        }
+      ]
+    },
+
+    footer: {
+      block: [
+        {
+          title: 'https://zos.alipayobjects.com/rmsportal/qqaimmXZVSwAhpL.svg',
+          content: 'Đặc tả hoạt hình và các thành phần của Ant Design.'
         },
-      },
-      {
-        name: 'block1',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: { children: '产品' },
-        content: {
-          children: (
-            <span>
-              <p>
-                {' '}
-                <span href="#">产品更新记录</span>{' '}
-              </p>{' '}
-              <p>
-                {' '}
-                <span href="#">API文档</span>{' '}
-              </p>{' '}
-              <p>
-                {' '}
-                <span href="#">快速入门</span>{' '}
-              </p>{' '}
-              <p>
-                {' '}
-                <span href="#">参考指南</span>{' '}
-              </p>
-            </span>
-          ),
+        {
+          title: 'Các sản phẩm',
+          content: (
+              <span>
+                <p><span href="#">Hồ sơ cập nhật sản phẩm</span></p>
+                <p><span href="#">Tài liệu API</span></p>
+                <p><span href="#">Bắt đầu nhanh</span></p>
+                <p><span href="#">Hướng dẫn tham khảo</span></p>
+              </span>
+          )
         },
-      },
-      {
-        name: 'block2',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: { children: '关于' },
-        content: {
-          children: (
-            <span>
-              <p>
-                {' '}
-                <span href="#">FAQ</span>{' '}
-              </p>{' '}
-              <p>
-                {' '}
-                <span href="#">联系我们</span>{' '}
-              </p>
-            </span>
-          ),
+        {
+          title: 'Giới thiệu',
+          content: (
+              <span>
+                <p><span href="#">Câu hỏi thường gặp</span></p>
+                <p><span href="#">Liên hệ chúng tôi</span></p>
+              </span>
+          )
         },
-      },
-      {
-        name: 'block3',
-        xs: 24,
-        md: 6,
-        className: 'block',
-        title: { children: '资源' },
-        content: {
-          children: (
-            <span>
-              <p>
-                {' '}
-                <span href="#">Ant Design</span>{' '}
-              </p>{' '}
-              <p>
-                {' '}
-                <span href="#">Ant Design</span>{' '}
-              </p>{' '}
-              <p>
-                {' '}
-                <span href="#">Ant Design</span>{' '}
-              </p>{' '}
-              <p>
-                {' '}
-                <span href="#">Ant Design</span>{' '}
-              </p>
-            </span>
-          ),
-        },
-      },
-    ],
-  },
-  copyrightWrapper: { className: 'copyright-wrapper' },
-  copyrightPage: { className: 'home-page' },
-  copyright: {
-    className: 'copyright',
-    children: (
-      <span>
-        ©2018 by <a href="https://motion.ant.design">Ant Motion</a> All Rights
-        Reserved
-      </span>
-    ),
-  },
-};
+        {
+          title: 'Tài nguyên',
+          content: (
+              <span>
+                <p><span href="#">Ant Design</span></p>
+                <p><span href="#">Ant Design</span></p>
+                <p><span href="#">Ant Design</span></p>
+                <p><span href="#">Ant Design</span></p>
+              </span>
+          )
+        }
+      ],
+      copyright: (
+        <span>
+          ©2018 by <a href='https://ant.design'>Ant Motion</a> All Rights Reserved
+        </span>
+      )
+    }
+  }
+}

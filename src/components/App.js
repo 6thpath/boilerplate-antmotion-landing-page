@@ -1,25 +1,18 @@
-/* eslint no-undef: 0 */
-/* eslint arrow-parens: 0 */
 import React from 'react'
 import { enquireScreen } from 'enquire-js'
 
 import 'antd/dist/antd.css'
 
-import Nav0 from './Layout/Nav0'
-import Banner0 from './Layout/Banner0'
-import Content0 from './Layout/Content0'
-import Content5 from './Layout/Content5'
-import Content3 from './Layout/Content3'
-import Footer1 from './Layout/Footer1'
+import { Affix, Button } from 'antd'
 
-import {
-  Nav00DataSource,
-  Banner01DataSource,
-  Content00DataSource,
-  Content50DataSource,
-  Content30DataSource,
-  Footer10DataSource
-} from '../data.source'
+import Nav from './Layout/Nav'
+import Banner from './Layout/Banner'
+import FirstSection from './Layout/FirstSection'
+import SecondSection from './Layout/SecondSection'
+import ThirdSection from './Layout/ThirdSection'
+import Footer from './Layout/Footer'
+
+import { languageConfig } from '../data.source'
 import '../less/antMotionStyle.less'
 
 let isMobile
@@ -32,7 +25,9 @@ export default class Home extends React.Component {
     super(props)
     this.state = {
       isMobile,
-      show: !location.port
+      show: !location.port,
+      isEnglish: true,
+      buttonText: `Tiếng Việt`
     }
   }
 
@@ -49,41 +44,43 @@ export default class Home extends React.Component {
   }
 
   render() {
+    const { isEnglish } = this.state
+    const { English, Vietnamese } = languageConfig
     const children = [
-      <Nav0
-        id="Nav0_0"
-        key="Nav0_0"
-        dataSource={Nav00DataSource}
+      <Nav
+        id="Nav"
+        key="Nav"
+        textData={isEnglish ? English : Vietnamese}
         isMobile={this.state.isMobile}
       />,
-      <Banner0
-        id="Banner0_1"
-        key="Banner0_1"
-        dataSource={Banner01DataSource}
+      <Banner
+        id="Banner"
+        key="Banner"
+        textData={isEnglish ? English : Vietnamese}
         isMobile={this.state.isMobile}
       />,
-      <Content0
-        id="Content0_0"
-        key="Content0_0"
-        dataSource={Content00DataSource}
+      <FirstSection
+        id="FirstSection"
+        key="FirstSection"
+        textData={isEnglish ? English : Vietnamese}
         isMobile={this.state.isMobile}
       />,
-      <Content5
-        id="Content5_0"
-        key="Content5_0"
-        dataSource={Content50DataSource}
+      <SecondSection
+        id="SecondSection"
+        key="SecondSection"
+        textData={isEnglish ? English : Vietnamese}
         isMobile={this.state.isMobile}
       />,
-      <Content3
-        id="Content3_0"
-        key="Content3_0"
-        dataSource={Content30DataSource}
+      <ThirdSection
+        id="ThirdSection"
+        key="ThirdSection"
+        textData={isEnglish ? English : Vietnamese}
         isMobile={this.state.isMobile}
       />,
-      <Footer1
-        id="Footer1_0"
-        key="Footer1_0"
-        dataSource={Footer10DataSource}
+      <Footer
+        id="Footer"
+        key="Footer"
+        textData={isEnglish ? English : Vietnamese}
         isMobile={this.state.isMobile}
       />,
     ]
@@ -94,6 +91,19 @@ export default class Home extends React.Component {
         ref={(d) => { this.dom = d }}
       >
         {this.state.show && children}
+        <Affix offsetBottom={5} style={{position: 'absolute', right: 10}}>
+          <Button
+            type='primary'
+            onClick={() => {
+              this.setState({
+                isEnglish: !this.state.isEnglish,
+                buttonText: this.state.buttonText === `Tiếng Việt` ? `English` : `Tiếng Việt`
+              })
+            }}
+          >
+            {this.state.buttonText}
+          </Button>
+        </Affix>
       </div>
     )
   }
